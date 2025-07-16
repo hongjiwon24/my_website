@@ -1,15 +1,20 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
 export default function DetailModal({ onClose, data }) {
   const { heading, video, tech, type, detail } = data;
   const { duration, members } = detail || {};
 
-  return (
+  const modalRoot = document.getElementById('modal-root');
+  if (!modalRoot) return null; // modal-root 없으면 아무것도 안 그려요
+
+  return ReactDOM.createPortal(
     <Overlay onClick={onClose}>
       <ModalBox onClick={(e) => e.stopPropagation()}>
         <Header>
-          <Title>{heading}</Title>
+          {/* <Title>{heading}</Title> */}
+          <Title>Detail</Title>
           <Dot />
         </Header>
 
@@ -71,10 +76,10 @@ export default function DetailModal({ onClose, data }) {
           )}
         </InfoList>
       </ModalBox>
-    </Overlay>
+    </Overlay>,
+    modalRoot
   );
 }
-
 // Styled Components
 const Overlay = styled.div`
   position: fixed;
@@ -83,36 +88,37 @@ const Overlay = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 3000; /* 👈 헤더보다 높게! */
 `;
 
 const ModalBox = styled.div`
   background: white;
-  padding: 2rem;
+  padding: 2.7rem 3rem;
   width: 600px;
   max-width: 90%;
-  max-height: 90vh; /* 💡 화면 90% 이상 넘지 않게 제한 */
-  overflow-y: auto;  /* 💡 세로 스크롤 추가 */
-  border-radius: 8px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 4px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
-💡 /* 스크롤바 안 보이게 하고 싶다면 아래 줄 추가 (선택사항) */
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
+  /* 선택: 스크롤바 숨기기 */
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
     display: none;
-    }
+  }
+
+  z-index: 3001; /* 👈 명시해주면 확실하게 모달 내부도 위에 올라와요 */
 `;
 
 const Header = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
 `;
 
 const Title = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
 `;
 
@@ -131,7 +137,7 @@ const Preview = styled.div`
 
 const Video = styled.video`
   width: 100%;
-  border-radius: 6px;
+  border-radius: 2px;
   object-fit: cover;
 `;
 
@@ -149,11 +155,11 @@ const LabelRow = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 `;
 
 const Label = styled.span`
-  font-weight: 600;
+  font-weight: bold;
 `;
 
 const Content = styled.p`

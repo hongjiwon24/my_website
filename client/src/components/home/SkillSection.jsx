@@ -6,7 +6,7 @@ export default function SkillSection() {
   const [openIndex, setOpenIndex] = useState(0); // 0: 프론트엔드 열림
 
   const handleToggle = (index) => {
-    setOpenIndex(prev => (prev === index ? -1 : index)); // 같은 거 클릭 시 닫힘
+    setOpenIndex(prev => (prev === index ? -1 : index));
   };
 
   return (
@@ -23,12 +23,11 @@ export default function SkillSection() {
           <li>- SCSS 문법과 BEM 네이밍 컨벤션을 활용</li>
           <li>- React, Storybook 사용 경험 있음</li>
           <Icons>
-            <IconImage src="/icons/html.svg" alt="html" />
-            <IconImage src="/icons/css.svg" alt="css" />
-            <IconImage src="/icons/js.svg" alt="js" />
-            <IconImage src="/icons/jquery.svg" alt="jquery" />
-            <IconImage src="/icons/react.svg" alt="react" />
-            <IconImage src="/icons/vue.svg" alt="vue" />
+            {['html', 'css', 'js', 'jquery', 'react', 'vue'].map(name => (
+              <IconGroup key={name}>
+                <IconImage src={`/icons/${name}.svg`} alt={name} />
+              </IconGroup>
+            ))}
           </Icons>
         </SkillList>
       </SkillAccordion>
@@ -42,9 +41,11 @@ export default function SkillSection() {
           <li>- Photoshop, Illustrator 사용 가능</li>
           <li>- Figma로 UX/UI 설계 및 프로토타입 제작 가능</li>
           <Icons>
-            <IconImage src="/icons/figma.svg" alt="figma" />
-            <IconImage src="/icons/ai.png" alt="illustrator" />
-            <IconImage src="/icons/ps.png" alt="photoshop" />
+            {['figma.svg', 'ai.png', 'ps.png'].map(name => (
+              <IconGroup key={name}>
+                <IconImage src={`/icons/${name}`} alt={name} />
+              </IconGroup>
+            ))}
           </Icons>
         </SkillList>
       </SkillAccordion>
@@ -57,10 +58,11 @@ export default function SkillSection() {
         <SkillList>
           <li>- Visual Studio Code, Git, GitHub 사용</li>
           <Icons>
-            <IconImage src="/icons/vscode.png" alt="vscode" />
-            <IconImage src="/icons/github.png" alt="github" />
-            <IconImage src="/icons/git.png" alt="git" />
-            <IconImage src="/icons/terminal.png" alt="terminal" />
+            {['vs.png', ].map(name => (
+              <IconGroup key={name}>
+                <IconImage src={`/icons/${name}`} alt={name} />
+              </IconGroup>
+            ))}
           </Icons>
         </SkillList>
       </SkillAccordion>
@@ -74,8 +76,11 @@ export default function SkillSection() {
           <li>- git으로 파일 협업</li>
           <li>- Figma로 UX/UI 설계 및 프로토타입 제작 가능</li>
           <Icons>
-            <IconImage src="/icons/vscode.png" alt="vscode" />
-            <IconImage src="/icons/github.png" alt="github" />
+            {[ 'git.svg', ].map(name => (
+              <IconGroup key={name}>
+                <IconImage src={`/icons/${name}`} alt={name} />
+              </IconGroup>
+            ))}
           </Icons>
         </SkillList>
       </SkillAccordion>
@@ -85,7 +90,12 @@ export default function SkillSection() {
 
 // ---------------- Styled Components ----------------
 
-const Section = styled.section``;
+const Section = styled.div`
+  margin: 0 auto;
+  padding: 158px 0 0 0;
+  width: 1010px;
+  height: 100vh;
+`;
 
 const Title = styled.h2`
   font-size: 36px;
@@ -95,31 +105,33 @@ const Title = styled.h2`
 
 const SkillList = styled.ul`
   margin: 0;
-  padding-left: 1.2rem;
+  padding: 14px 0 20px 0;
   color: #333;
   font-size: 0.95rem;
   line-height: 1.6;
 
   li {
     margin-bottom: 0.4rem;
-    list-style: disc;
+    list-style: none;
   }
 `;
 
 const Icons = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 22px;
 `;
 
-const IconImage = styled.img`
-  width: 55px;
-  height: 55px;
-  object-fit: contain;
-  margin-right: 10px;
-  padding: 4px;
+const IconGroup = styled.div`
+  padding: 8px;
   border: 1px solid #AFB6BA;
   border-radius: 6px;
   background-color: white;
+`;
+
+const IconImage = styled.img`
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
 `;

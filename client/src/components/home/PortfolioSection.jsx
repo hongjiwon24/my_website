@@ -10,7 +10,7 @@ export default function ProjectTabs() {
   const active = tabData[activeIndex];
 
   return (
-    <section>
+    <Section>
       <ProjectSection>
         <Title>PORTFOLIO</Title>
         <TabMenu>
@@ -63,15 +63,22 @@ export default function ProjectTabs() {
           />
         )}
       </ProjectSection>
-    </section>
+    </Section>
   );
 }
 
 // Styled Components
+
+const Section = styled.div`
+  margin: 0 auto;
+  padding: 158px 0 0 0;
+  width: 1010px;
+  height: 100vh;
+`
+
 const ProjectSection = styled.div`
   display: flex;
   flex-direction: column;
-  font-family: 'Pretendard', sans-serif;
   width: 100%;
 `;
 
@@ -218,5 +225,6 @@ const VisitButton = styled.button`
 
   &:hover {
     background-color: #135781ff;
+    color: #fafafa;
   }
 `;

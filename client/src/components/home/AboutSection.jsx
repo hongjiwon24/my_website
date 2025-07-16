@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export default function AboutSection() {
   return (
-    <section>
+    <Section>
       <Title>ABOUT ME</Title>
       <ContentWrapper>
         <ProfileArea>
@@ -34,10 +34,17 @@ export default function AboutSection() {
         </KeywordList>
         </IntroArea>
       </ContentWrapper>
-    </section>
+    </Section>
   );
 }
 
+
+const Section = styled.div`
+  margin: 0 auto;
+  padding: 158px 0 0 0;
+  width: 1010px;
+  height: 100vh;
+`
 
 const Title = styled.h2`
   font-size: 36px;
@@ -86,13 +93,13 @@ const AccentDot = styled.span`
 const IntroText = styled.p`
   font-size: 14px;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   color: #333;
 `
 
 // 인포 그룹
 const InfoList = styled.ul`
-  margin-bottom: 20px;
+  margin-bottom: 27px;
   padding: 12px 0;
 `
 

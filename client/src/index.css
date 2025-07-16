@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Noto Sans KR', 'Pretendard', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

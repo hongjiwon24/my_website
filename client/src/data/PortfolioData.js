@@ -6,7 +6,8 @@ const PortfolioData = [
     tech: ['React', 'Node.js', 'MongoDB', 'Illustrator'],
     type: '팀 프로젝트 (참여도 60%)',
     image: '/images/baeooda.png',
-    video: '/videos/baeooda.mp4',
+    video: '/videos/video_01.mp4',
+    link: 'https://baeooda.vercel.app',
     detail: {
       duration: '총 30일',
       members: [
@@ -28,7 +29,8 @@ const PortfolioData = [
     tech: ['HTML', 'CSS', 'JavaScript', 'Vue', 'Illustrator'],
     type: '개인 프로젝트 (참여도 100%)',
     image: '/images/pupi.png',
-    video: '/videos/pupi.mp4',
+    video: '/videos/video_01.mp4',
+    link: 'https://pupi-project.vercel.app/',
     detail: {
       duration: '총 30일',
       members: [
@@ -46,7 +48,8 @@ const PortfolioData = [
     tech: ['React', 'Firebase', 'Styled-components'],
     type: '개인 프로젝트 (참여도 100%)',
     image: '/images/phone.jpg',
-    video: '/videos/meloa.mp4',
+    video: '/videos/video_01.mp4',
+    link: 'https://pupi-project.vercel.app/',
     detail: {
       duration: '총 30일',
       members: [

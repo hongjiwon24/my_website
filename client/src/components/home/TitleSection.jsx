@@ -12,7 +12,7 @@ export default function TitleSection() {
   return (
     <Section>
       <Title>Web Publisher</Title>
-      <Image src="https://images.unsplash.com/photo-1610532693607-61c8d3b8fded?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="타이틀 이미지" />
+      <Image src="/images/title.png" alt="타이틀 이미지" />
       <List>
         <ListItem onClick={() => handleScroll('about')}>ABOUT</ListItem>
         <ListItem onClick={() => handleScroll('skill')}>SKILL</ListItem>
@@ -24,8 +24,11 @@ export default function TitleSection() {
 }
 
 const Section = styled.section`
-  padding-top: 90px;
+  margin: 0 auto;
+  width: 1010px;
+  padding-top: 127px;
 `
+
 
 const Title = styled.h1`
   font-size: 23px;

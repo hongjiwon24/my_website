@@ -29,7 +29,7 @@ function App() {
       <AsideButtons scrollRef={scrollRef} />
       <ScrollWrapper ref={scrollRef}>
         <Home />
-        <Footer />
+        {/* <Footer /> */}
       </ScrollWrapper>
       
     </>

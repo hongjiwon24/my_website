@@ -14,16 +14,18 @@ export default function Footer() {
 
 // Footer 전용 Section
 const FooterSection = styled.section`
-  height: 300px;
-  padding: 60px 0;
+  height: 200px;
+  padding: 0;
+  background-color: #415E70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   scroll-snap-align: none !important;
 `;
 
 const FooterWrapper = styled.footer`
-  margin-top: auto;
   padding: 40px 20px;
-  background-color: #f9f9f9;
-  color: #888;
+  color: #bbc9d1ff;
   text-align: center;
 `;
 
