@@ -25,11 +25,18 @@ const InnerScroll = styled.div`
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 
   & > section {
     scroll-snap-align: start;
     min-height: 100vh;
+  }
+    
+  // 모바일에서는 기능 비활성화
+  @media (max-width: 768px) {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
   }
 `;

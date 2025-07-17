@@ -33,6 +33,10 @@ const AccordionHeader = styled.div`
   align-items: center;
   gap: 12px;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+   padding: 10px 15px;
+  }
 `;
 
 const Title = styled.h2`
@@ -41,6 +45,10 @@ const Title = styled.h2`
   flex: 1;
   font-weight: normal;
   padding: 7px 0;
+  
+  @media (max-width: 768px) {
+   font-size: 21px;
+  }
 `;
 
 const AccentDot = styled.span`
@@ -57,4 +65,8 @@ const AccordionContent = styled.div`
   line-height: 1.6;
   font-size: 14px;
   color: #333;
+
+  @media (max-width: 768px) {
+   padding: 0px 15px;
+  }
 `;

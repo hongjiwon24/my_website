@@ -41,6 +41,11 @@ const AsideWrapper = styled.aside`
   flex-direction: column;
   gap: 12px;
   z-index: 100;
+
+  @media (max-width: 768px) {
+    bottom: 22px;
+    right: 22px;
+  }
 `;
 
 const MailButton = styled.button`
@@ -59,11 +64,16 @@ const MailButton = styled.button`
     background: #196391ff;
     color: #fafafa;
   }
+
+  @media (max-width: 768px) {
+    width: 58px;
+    height: 58px;
+  }
 `;
 
 const TopButton = styled.button`
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border: 1px solid #64A2C8;
   background: #fafafa;
   border-radius: 50%;
@@ -78,5 +88,10 @@ const TopButton = styled.button`
   &:hover {
     border: 1px solid #196391ff;
     color: #196391ff;
+  }
+    
+  @media (max-width: 768px) {
+    width: 58px;
+    height: 58px;
   }
 `;

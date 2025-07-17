@@ -37,6 +37,11 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 86%;
+    padding-top: 50px;
+  }
 `;
 
 const Title = styled.h2`

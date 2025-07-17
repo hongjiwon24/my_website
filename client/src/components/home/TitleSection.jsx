@@ -26,14 +26,23 @@ export default function TitleSection() {
 const Section = styled.section`
   margin: 0 auto;
   width: 1010px;
+  min-height: 100vh;
   padding-top: 127px;
+  
+  @media (max-width: 768px) {
+    width: 86%;
+    padding-top: 50px;
+  }
 `
-
 
 const Title = styled.h1`
   font-size: 23px;
   color: #277FB5;
   margin: 20px 0;
+
+  @media (max-width: 768px) {
+    font-size: 27px;
+  }
 `
 
 const Image = styled.img`
@@ -48,6 +57,13 @@ const List = styled.ul`
   display: flex;
   justify-content: flex-end;
   gap: 65px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 37px;
+    margin-top: 29px;
+    align-items: center;
+  }
 `
 
 const ListItem = styled.li`
@@ -56,5 +72,9 @@ const ListItem = styled.li`
 
   &:hover{
     color: #277FB5;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
   }
 `

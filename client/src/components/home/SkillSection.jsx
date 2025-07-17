@@ -94,7 +94,12 @@ const Section = styled.div`
   margin: 0 auto;
   padding: 158px 0 0 0;
   width: 1010px;
-  height: 100vh;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    width: 86%;
+    padding-top: 100px;
+  }
 `;
 
 const Title = styled.h2`
@@ -110,9 +115,19 @@ const SkillList = styled.ul`
   font-size: 0.95rem;
   line-height: 1.6;
 
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
   li {
     margin-bottom: 0.4rem;
     list-style: none;
+    padding: 14px 0 2px 0;
+
+    @media (max-width: 768px) {
+      padding: 5px 0 2px 0;
+      margin-bottom: 0;
+    }
   }
 `;
 
@@ -121,6 +136,10 @@ const Icons = styled.div`
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 22px;
+
+  @media (max-width: 768px) {
+   margin-top: 18px;
+  }
 `;
 
 const IconGroup = styled.div`
@@ -134,4 +153,9 @@ const IconImage = styled.img`
   width: 35px;
   height: 35px;
   object-fit: contain;
+  
+  @media (max-width: 768px) {
+    width: 23px;
+    height: 23px;
+  }
 `;

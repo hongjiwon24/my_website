@@ -91,6 +91,10 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 308px;
+  }
 `
 
 const Title = styled.h1`
@@ -104,6 +108,10 @@ const List = styled.ul`
   display: flex;
   justify-content: flex-end;
   gap: 53px;
+
+  @media (max-width: 768px) {
+    gap: 14px;
+  }
 `
 
 const ListItem = styled.li`
@@ -135,6 +143,10 @@ const ListItem = styled.li`
 
   &.active::after {
     width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
   }
 `
 

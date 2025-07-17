@@ -73,7 +73,12 @@ const Section = styled.div`
   margin: 0 auto;
   padding: 158px 0 0 0;
   width: 1010px;
-  height: 100vh;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+    width: 86%;
+    padding-top: 50px;
+  }
 `
 
 const ProjectSection = styled.div`
