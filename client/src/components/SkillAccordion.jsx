@@ -26,7 +26,7 @@ const AccordionWrapper = styled.div`
 
 const AccordionHeader = styled.div`
   color: #2D2D2D;
-  border-bottom: 1px solid #2D2D2D;
+  border-bottom: 1px solid #BFBFBF;
   padding: 14px 18px;
   cursor: pointer;
   display: flex;

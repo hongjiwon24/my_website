@@ -203,9 +203,9 @@ const ButtonGroup = styled.div`
 
 const DetailButton = styled.button`
   padding: 12px 40px;
-  background-color: #277FB5;
-  border: none;
-  color: #fafafa;
+  background-color: white;
+  border: 1px solid #135781ff;
+  color: #135781ff;
   border-radius: 4px;
   font-size: 15px;
   font-weight: 500;
@@ -214,6 +214,7 @@ const DetailButton = styled.button`
 
   &:hover {
     background-color: #135781ff;
+    color: white;
   }
 `;
 

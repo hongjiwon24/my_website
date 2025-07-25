@@ -11,7 +11,7 @@ export default function TitleSection() {
 
   return (
     <Section>
-      <Title>Web Publisher</Title>
+      <Title>HJW Portfolio</Title>
       <Image src="/images/title.png" alt="타이틀 이미지" />
       <List>
         <ListItem onClick={() => handleScroll('about')}>ABOUT</ListItem>

@@ -4,7 +4,6 @@ export default function AboutSection() {
   return (
     <Section>
       <Title>ABOUT ME</Title>
-      <hr />
       <ContentWrapper>
           <MobileIntroText>
             “안녕하세요! 사용자 중심의 UI/UX를 고민하는 프론트엔드 개발자 홍지원입니다. <br />
@@ -46,7 +45,8 @@ export default function AboutSection() {
 
 
         <KeywordList>
-        <KeywordItem className="active">ENFJ</KeywordItem>
+        {/* <KeywordItem className="active">ENFJ</KeywordItem> */}
+        <KeywordItem >ENFJ</KeywordItem>
         <KeywordItem>책임감 있는</KeywordItem>
         <KeywordItem>성실한</KeywordItem>
         <KeywordItem>따뜻한</KeywordItem>
@@ -174,9 +174,11 @@ const IntroText = styled.p`
 const InfoList = styled.ul`
   margin-bottom: 27px;
   padding: 12px 0;
+  padding: 20px 12px;
+  border-radius: 10px;
 
   @media (max-width: 768px) {
-    background-color: #ccc;
+    background-color: #e1e1e1;
     padding: 20px 24px;
     border-radius: 10px;
   }
@@ -192,7 +194,7 @@ const InfoItem = styled.li`
 
   .label {
     width: 100px;
-    font-weight: bold;
+    font-weight: 600;
     color: #000;
   }
 
@@ -226,9 +228,9 @@ const KeywordList = styled.ul`
 `
 
 const KeywordItem = styled.li`
-  padding: 8px 37px;
+  padding: 8px 34px;
   border-radius: 20px;
-  font-size: 15px;
+  font-size: 14px;
   border: 1px dashed #B0B6B9;
   color: #B0B6B9;
   font-weight: bold;

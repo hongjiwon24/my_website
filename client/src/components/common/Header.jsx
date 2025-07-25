@@ -45,7 +45,7 @@ export default function Header({ scrollTop, scrollRef }) {
             setActiveMenu('about');
           }
         }}>
-          로고
+        <Logo src="/icons/logo.svg" alt="로고" />
         </Title>
 
         <List>
@@ -101,6 +101,11 @@ const Title = styled.h1`
   cursor: pointer;
   font-size: 23px;
   color: #277FB5;
+`
+
+const Logo = styled.img`
+  width: 40px;  
+  height: 40px;
 `
 
 const List = styled.ul`
